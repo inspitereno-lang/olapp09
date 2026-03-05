@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>OLAPP - Learn Smart, Teach Better</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1c74e9",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111821",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Navigation Bar -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-2 text-primary">
+                    <span class="material-symbols-outlined text-3xl font-bold">menu_book</span>
+                    <h2 class="text-xl font-extrabold tracking-tight">OLAPP</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#features">Features</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#how-it-works">How It
+                        Works</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#courses">Courses</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#pricing">Pricing</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors"
+                        href="#testimonials">Testimonials</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#about">About</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="hidden sm:flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                        Get Started
+                    </button>
+                    <div
+                        class="size-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+                        <span class="material-symbols-outlined text-primary">person</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <main class="flex-1">
+            <section class="max-w-7xl mx-auto px-6 md:px-20 py-12 md:py-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="flex flex-col gap-8">
+                        <div class="space-y-4">
+                            <span
+                                class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">Next-Gen
+                                Education</span>
+                            <h1
+                                class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-slate-900 dark:text-white">
+                                Learn Smart, <span class="text-primary">Teach Better</span>
+                            </h1>
+                            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
+                                Empowering students and educators with an integrated digital learning ecosystem designed
+                                for excellence in the modern classroom.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="student-portal.html"
+                                class="flex min-w-[160px] items-center justify-center rounded-xl bg-primary h-14 px-8 text-white font-bold shadow-xl shadow-primary/30 hover:-translate-y-1 transition-all">
+                                Student Login
+                            </a>
+                            <a href="teacher-portal.html"
+                                class="flex min-w-[160px] items-center justify-center rounded-xl bg-white dark:bg-slate-800 border-2 border-primary/10 h-14 px-8 text-primary dark:text-white font-bold hover:bg-primary/5 transition-all">
+                                Teacher Login
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-4 pt-4">
+                            <div class="flex -space-x-3">
+                                <div class="size-10 rounded-full border-2 border-white bg-slate-200"
+                                    data-alt="Avatar of a happy student"></div>
+                                <div class="size-10 rounded-full border-2 border-white bg-slate-300"
+                                    data-alt="Avatar of a smiling educator"></div>
+                                <div class="size-10 rounded-full border-2 border-white bg-slate-400"
+                                    data-alt="Avatar of a diverse student"></div>
+                            </div>
+                            <p class="text-sm font-medium text-slate-500">Joined by 10k+ active learners this month</p>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl group-hover:bg-primary/20 transition-all duration-500">
+                        </div>
+                        <div class="relative aspect-video rounded-3xl bg-slate-200 dark:bg-slate-800 shadow-2xl overflow-hidden border border-primary/5"
+                            data-alt="Students collaborating together in a modern bright classroom"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYDfLiHhShJobQL5I8hK1R7vbQt-voki6aOESSECmw_PRn4qA1jm0JQUUSsbALdi5ohgOOnqX2ll8jpukGEpQlLPBHmXadSGwjPeX8U9DbtgiIJJXUby76dmV9idCPIBgFXZGNObtcNV7fNnMIZO4jR-_qBVyqalFjh7udq-w_8VAZ5BlT1yUQXMgyTnMbFNQi5mapovHG9VGGB9y3nhr0kN-CIUjmaz-fHaf9EtwF_1cFVGm0oeXkPmJ33LL3FapNgLn7SYrkvYsC'); background-size: cover; background-position: center;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="bg-white dark:bg-slate-900/50 py-24">
+                <div class="max-w-7xl mx-auto px-6 md:px-20">
+                    <div class="mb-16 text-center md:text-left">
+                        <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Features</h2>
+                        <h3 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Everything you
+                            need to excel</h3>
+                        <p class="text-slate-600 dark:text-slate-400 max-w-2xl">A comprehensive suite of tools designed
+                            to streamline the educational process for both instructors and learners.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Reading Cards -->
+                        <div
+                            class="group p-8 rounded-2xl border border-primary/5 bg-background-light dark:bg-slate-800/50 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">style</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Reading Cards</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Interactive bite-sized
+                                learning materials optimized for retention and quick review.</p>
+                        </div>
+                        <!-- Worksheets -->
+                        <div
+                            class="group p-8 rounded-2xl border border-primary/5 bg-background-light dark:bg-slate-800/50 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">description</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Worksheets</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Printable and digital
+                                practice sheets that auto-grade for instant feedback.</p>
+                        </div>
+                        <!-- Videos -->
+                        <div
+                            class="group p-8 rounded-2xl border border-primary/5 bg-background-light dark:bg-slate-800/50 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">play_circle</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Videos</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">High-quality
+                                educational content with embedded interaction points.</p>
+                        </div>
+                        <!-- Quizzes -->
+                        <div
+                            class="group p-8 rounded-2xl border border-primary/5 bg-background-light dark:bg-slate-800/50 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">quiz</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Quizzes</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Real-time assessment
+                                tools to track progress and identify knowledge gaps.</p>
+                        </div>
+                        <!-- Teaching Materials -->
+                        <div
+                            class="group p-8 rounded-2xl border border-primary/5 bg-background-light dark:bg-slate-800/50 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">co_present</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Teaching Materials</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Extensive resource
+                                library for educators including lesson plans and slide decks.</p>
+                        </div>
+                        <!-- Community -->
+                        <div
+                            class="group p-8 rounded-2xl border border-primary/5 bg-background-light dark:bg-slate-800/50 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">groups</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Student Groups</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Collaborative spaces
+                                for students to learn together and share knowledge.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section id="how-it-works" class="py-24 max-w-7xl mx-auto px-6 md:px-20">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl font-black mb-4">Three simple steps to mastery</h3>
+                    <p class="text-slate-500">How OLAPP simplifies the educational journey</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                    <!-- Connector line -->
+                    <div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-0.5 bg-primary/20 -z-10"></div>
+
+                    <div class="flex flex-col items-center text-center group">
+                        <div
+                            class="size-24 rounded-full bg-white dark:bg-slate-800 border-4 border-primary/10 shadow-lg flex items-center justify-center mb-6 group-hover:border-primary transition-colors">
+                            <span class="material-symbols-outlined text-4xl text-primary">account_circle</span>
+                        </div>
+                        <h5 class="text-xl font-bold mb-2">Create Account</h5>
+                        <p class="text-sm text-slate-500">Sign up as a student or teacher to access your personalized
+                            dashboard.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center group">
+                        <div
+                            class="size-24 rounded-full bg-white dark:bg-slate-800 border-4 border-primary/10 shadow-lg flex items-center justify-center mb-6 group-hover:border-primary transition-colors">
+                            <span class="material-symbols-outlined text-4xl text-primary">library_add_check</span>
+                        </div>
+                        <h5 class="text-xl font-bold mb-2">Select Resources</h5>
+                        <p class="text-sm text-slate-500">Browse and pick from thousands of high-quality learning
+                            modules and materials.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center group">
+                        <div
+                            class="size-24 rounded-full bg-white dark:bg-slate-800 border-4 border-primary/10 shadow-lg flex items-center justify-center mb-6 group-hover:border-primary transition-colors">
+                            <span class="material-symbols-outlined text-4xl text-primary">auto_graph</span>
+                        </div>
+                        <h5 class="text-xl font-bold mb-2">Track Success</h5>
+                        <p class="text-sm text-slate-500">Monitor your growth with real-time analytics and detailed
+                            performance reports.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses Section -->
+            <section id="courses" class="bg-white dark:bg-slate-900/50 py-24">
+                <div class="max-w-7xl mx-auto px-6 md:px-20">
+                    <div class="mb-16 text-center">
+                        <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Courses</h2>
+                        <h3 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Explore our top
+                            courses</h3>
+                        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Curated by expert educators, our
+                            courses cover everything from foundational concepts to advanced topics.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div
+                            class="group bg-background-light dark:bg-slate-800/50 rounded-2xl border border-primary/5 overflow-hidden hover:shadow-2xl hover:border-primary/30 transition-all duration-300">
+                            <div
+                                class="h-44 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-6xl opacity-80">calculate</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Mathematics</h4>
+                                <p class="text-sm text-slate-500 mb-4">Algebra, Geometry, Calculus & more</p>
+                                <div class="flex items-center justify-between"><span
+                                        class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">42
+                                        Lessons</span><span class="text-xs text-slate-400">Beginner – Advanced</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="group bg-background-light dark:bg-slate-800/50 rounded-2xl border border-primary/5 overflow-hidden hover:shadow-2xl hover:border-primary/30 transition-all duration-300">
+                            <div
+                                class="h-44 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-6xl opacity-80">science</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Physics</h4>
+                                <p class="text-sm text-slate-500 mb-4">Mechanics, Optics, Thermodynamics</p>
+                                <div class="flex items-center justify-between"><span
+                                        class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">38
+                                        Lessons</span><span class="text-xs text-slate-400">Intermediate</span></div>
+                            </div>
+                        </div>
+                        <div
+                            class="group bg-background-light dark:bg-slate-800/50 rounded-2xl border border-primary/5 overflow-hidden hover:shadow-2xl hover:border-primary/30 transition-all duration-300">
+                            <div
+                                class="h-44 bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-6xl opacity-80">biotech</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Chemistry</h4>
+                                <p class="text-sm text-slate-500 mb-4">Organic, Inorganic & Physical Chemistry</p>
+                                <div class="flex items-center justify-between"><span
+                                        class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">35
+                                        Lessons</span><span class="text-xs text-slate-400">Beginner – Advanced</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="group bg-background-light dark:bg-slate-800/50 rounded-2xl border border-primary/5 overflow-hidden hover:shadow-2xl hover:border-primary/30 transition-all duration-300">
+                            <div
+                                class="h-44 bg-gradient-to-br from-rose-500 to-pink-700 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-6xl opacity-80">eco</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Biology</h4>
+                                <p class="text-sm text-slate-500 mb-4">Cell Biology, Genetics & Ecology</p>
+                                <div class="flex items-center justify-between"><span
+                                        class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">30
+                                        Lessons</span><span class="text-xs text-slate-400">Beginner</span></div>
+                            </div>
+                        </div>
+                        <div
+                            class="group bg-background-light dark:bg-slate-800/50 rounded-2xl border border-primary/5 overflow-hidden hover:shadow-2xl hover:border-primary/30 transition-all duration-300">
+                            <div
+                                class="h-44 bg-gradient-to-br from-cyan-500 to-teal-700 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-6xl opacity-80">terminal</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Computer Science</h4>
+                                <p class="text-sm text-slate-500 mb-4">Programming, Data Structures & AI</p>
+                                <div class="flex items-center justify-between"><span
+                                        class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">50
+                                        Lessons</span><span class="text-xs text-slate-400">All Levels</span></div>
+                            </div>
+                        </div>
+                        <div
+                            class="group bg-background-light dark:bg-slate-800/50 rounded-2xl border border-primary/5 overflow-hidden hover:shadow-2xl hover:border-primary/30 transition-all duration-300">
+                            <div
+                                class="h-44 bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-6xl opacity-80">menu_book</span>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">English Literature</h4>
+                                <p class="text-sm text-slate-500 mb-4">Poetry, Prose, Drama & Creative Writing</p>
+                                <div class="flex items-center justify-between"><span
+                                        class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">28
+                                        Lessons</span><span class="text-xs text-slate-400">Beginner –
+                                        Intermediate</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section id="pricing" class="py-24 max-w-7xl mx-auto px-6 md:px-20">
+                <div class="text-center mb-16">
+                    <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Pricing</h2>
+                    <h3 class="text-3xl md:text-5xl font-black mb-4">Plans for every learner</h3>
+                    <p class="text-slate-500">Choose a plan that fits your educational needs.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-8 hover:shadow-xl transition-all text-center">
+                        <span class="material-symbols-outlined text-4xl text-slate-400 mb-4">school</span>
+                        <h4 class="text-xl font-bold mb-2">Student Free</h4>
+                        <p class="text-4xl font-black text-primary mb-1">₹0</p>
+                        <p class="text-sm text-slate-400 mb-6">forever</p>
+                        <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3 text-left mb-8">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-green-500 text-lg">check_circle</span>Access
+                                to 10 free lessons</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-green-500 text-lg">check_circle</span>Basic
+                                quizzes & worksheets</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-green-500 text-lg">check_circle</span>Community
+                                forum access</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-slate-300 text-lg">cancel</span>No certificate
+                            </li>
+                        </ul>
+                        <a href="student-portal.html"
+                            class="block w-full py-3 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Get
+                            Started</a>
+                    </div>
+                    <div
+                        class="bg-primary rounded-2xl p-8 text-white shadow-2xl shadow-primary/30 relative overflow-hidden text-center scale-105">
+                        <div class="absolute top-0 right-0 bg-white/20 text-xs font-bold px-4 py-1 rounded-bl-lg">
+                            POPULAR</div>
+                        <span class="material-symbols-outlined text-4xl mb-4">workspace_premium</span>
+                        <h4 class="text-xl font-bold mb-2">Student Pro</h4>
+                        <p class="text-4xl font-black mb-1">₹499</p>
+                        <p class="text-sm opacity-80 mb-6">per month</p>
+                        <ul class="text-sm space-y-3 text-left mb-8 opacity-90">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg">check_circle</span>Unlimited lessons &
+                                videos</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg">check_circle</span>Advanced quizzes with
+                                analytics</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg">check_circle</span>Downloadable materials
+                            </li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg">check_circle</span>Completion certificates
+                            </li>
+                        </ul>
+                        <a href="student-portal.html"
+                            class="block w-full py-3 rounded-xl bg-white text-primary font-bold hover:bg-slate-100 transition-all">Subscribe
+                            Now</a>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-8 hover:shadow-xl transition-all text-center">
+                        <span class="material-symbols-outlined text-4xl text-emerald-500 mb-4">verified</span>
+                        <h4 class="text-xl font-bold mb-2">Teacher Pro</h4>
+                        <p class="text-4xl font-black text-primary mb-1">₹999</p>
+                        <p class="text-sm text-slate-400 mb-6">per month</p>
+                        <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3 text-left mb-8">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-green-500 text-lg">check_circle</span>Upload
+                                unlimited materials</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-green-500 text-lg">check_circle</span>Student
+                                performance analytics</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-green-500 text-lg">check_circle</span>Create
+                                custom quizzes & exams</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-green-500 text-lg">check_circle</span>Priority
+                                support</li>
+                        </ul>
+                        <a href="teacher-portal.html"
+                            class="block w-full py-3 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Start
+                            Teaching</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="bg-white dark:bg-slate-900/50 py-24">
+                <div class="max-w-7xl mx-auto px-6 md:px-20">
+                    <div class="text-center mb-16">
+                        <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Testimonials</h2>
+                        <h3 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">What our users
+                            say</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-background-light dark:bg-slate-800/50 p-8 rounded-2xl border border-primary/5">
+                            <div class="flex gap-1 mb-4 text-amber-400"><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span></div>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">"OLAPP has
+                                completely transformed how I study. The reading cards and quizzes are incredibly
+                                engaging. My grades improved within the first month!"</p>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm">
+                                    AR</div>
+                                <div>
+                                    <p class="font-bold text-sm">Anjali Rajan</p>
+                                    <p class="text-xs text-slate-500">Grade 12 Student</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-background-light dark:bg-slate-800/50 p-8 rounded-2xl border border-primary/5">
+                            <div class="flex gap-1 mb-4 text-amber-400"><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span></div>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">"As a teacher,
+                                OLAPP gives me everything I need – upload materials, track student progress, and create
+                                assessments. The best EdTech platform I've used."</p>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-600 font-bold text-sm">
+                                    MK</div>
+                                <div>
+                                    <p class="font-bold text-sm">Dr. Mohan Kumar</p>
+                                    <p class="text-xs text-slate-500">Physics Teacher</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-background-light dark:bg-slate-800/50 p-8 rounded-2xl border border-primary/5">
+                            <div class="flex gap-1 mb-4 text-amber-400"><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star</span><span
+                                    class="material-symbols-outlined">star_half</span></div>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">"The admin panel
+                                makes managing our school's content so simple. Real-time analytics and teacher
+                                management features are game-changers for us."</p>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-600 font-bold text-sm">
+                                    SP</div>
+                                <div>
+                                    <p class="font-bold text-sm">Sunitha Pillai</p>
+                                    <p class="text-xs text-slate-500">School Administrator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-24 max-w-7xl mx-auto px-6 md:px-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">About OLAPP</h2>
+                        <h3 class="text-3xl md:text-5xl font-black mb-6">Built by educators, <span
+                                class="text-primary">for educators</span></h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">OLAPP is an integrated
+                            digital learning ecosystem founded with a mission to bridge the gap between traditional and
+                            digital education. Our platform empowers both students and teachers with cutting-edge tools
+                            designed for the modern classroom.</p>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">From interactive reading
+                            cards and video lessons to real-time quizzes and comprehensive admin tools, OLAPP provides
+                            everything needed for a complete educational experience.</p>
+                        <div class="grid grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <p class="text-3xl font-black text-primary">10k+</p>
+                                <p class="text-xs text-slate-500 font-medium mt-1">Active Students</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-black text-primary">500+</p>
+                                <p class="text-xs text-slate-500 font-medium mt-1">Expert Teachers</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-black text-primary">3k+</p>
+                                <p class="text-xs text-slate-500 font-medium mt-1">Learning Materials</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="bg-primary/10 rounded-2xl p-6 flex flex-col items-center justify-center text-center gap-3 aspect-square">
+                            <span class="material-symbols-outlined text-primary text-4xl">devices</span>
+                            <p class="font-bold text-sm">Multi-Device Access</p>
+                        </div>
+                        <div
+                            class="bg-emerald-500/10 rounded-2xl p-6 flex flex-col items-center justify-center text-center gap-3 aspect-square">
+                            <span class="material-symbols-outlined text-emerald-600 text-4xl">lock</span>
+                            <p class="font-bold text-sm">Secure & Private</p>
+                        </div>
+                        <div
+                            class="bg-purple-500/10 rounded-2xl p-6 flex flex-col items-center justify-center text-center gap-3 aspect-square">
+                            <span class="material-symbols-outlined text-purple-600 text-4xl">support_agent</span>
+                            <p class="font-bold text-sm">24/7 Support</p>
+                        </div>
+                        <div
+                            class="bg-amber-500/10 rounded-2xl p-6 flex flex-col items-center justify-center text-center gap-3 aspect-square">
+                            <span class="material-symbols-outlined text-amber-600 text-4xl">update</span>
+                            <p class="font-bold text-sm">Regular Updates</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="bg-primary py-20 px-6 md:px-20">
+                <div class="max-w-4xl mx-auto text-center text-white">
+                    <h3 class="text-3xl md:text-5xl font-black mb-6">Ready to transform your learning journey?</h3>
+                    <p class="text-lg opacity-90 mb-10 max-w-2xl mx-auto">Join thousands of students and teachers
+                        already using OLAPP. Start for free today.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="student-portal.html"
+                            class="bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-xl hover:-translate-y-1 transition-all">Join
+                            as Student</a>
+                        <a href="teacher-portal.html"
+                            class="border-2 border-white/50 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">Join
+                            as Teacher</a>
+                        <a href="admin-panel.html"
+                            class="border-2 border-white/30 text-white/80 px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">Admin
+                            Panel</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-slate-300 py-16 px-6 md:px-20 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2 text-white">
+                        <span class="material-symbols-outlined text-2xl">menu_book</span>
+                        <h2 class="text-lg font-extrabold">OLAPP</h2>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Redefining the digital learning experience through innovation and accessibility.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">alternate_email</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="text-white font-bold mb-6">Quick Links</h6>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#about">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#courses">Our Courses</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#pricing">Pricing</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-white font-bold mb-6">Legal</h6>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Data Safety</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-white font-bold mb-6">Administration</h6>
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <a class="inline-flex items-center gap-2 px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 transition-colors"
+                                href="admin-panel.html">
+                                <span class="material-symbols-outlined text-sm">admin_panel_settings</span>
+                                <span>Admin Login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs">&copy; 2026 OLAPP Education Systems. All rights reserved.</p>
+                <div class="flex gap-8 text-xs">
+                    <a class="hover:text-white transition-colors" href="#">Status</a>
+                    <a class="hover:text-white transition-colors" href="#">Blog</a>
+                    <a class="hover:text-white transition-colors" href="#">Careers</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
